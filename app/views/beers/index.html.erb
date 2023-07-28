@@ -1,0 +1,11 @@
+<div class="cards">
+    <% @beers.each do |beer| %>
+      <div class='beer-cards'>
+          <%= image_tag "wwb.webp" %>
+          <h2><%= beer.name %></h2>
+          <p><%= beer.style %></p>
+          <p><%= beer.country %></p>
+          <p><%= beer.abv %></p>
+      </div>
+    <% end %>
+</div>
