@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :beers, only: [ :show]
   end
   resources :beers, only: [:index, :show]
-  resources :lists, only: [:index, :show]
+  resources :lists, only: [:index, :show, :create, :new, :destroy]
   # Defines the root path route ("/")
   # root "articles#index"
 end
