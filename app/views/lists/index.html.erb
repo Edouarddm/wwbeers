@@ -1,5 +1,13 @@
+<div class="container">
   <% @lists.each do |list| %>
       <%= link_to list_path(list) do%>
           <h2><%= list.name %></h2>
       <% end %>
-    <% end %>
+  <% end %>
+  <h3>Create a new list</h3>
+  <% @list = List.new %>
+  <%= simple_form_for @list do |f| %>
+    <%= f.input :name, placeholder: 'Name of the list' %>
+    <%= f.submit class: 'btn btn-flat' %>
+  <% end %>
+</div>
