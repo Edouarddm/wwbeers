@@ -6,4 +6,11 @@ class Beer < ApplicationRecord
   validates :style, presence: true
   validates :abv, presence: true
   validates :brewery, presence: true
+
+  include PgSearch::Model
+  pg_search_scope :search_by_name_style_and_country,
+    against: [ :name, :style, :country ],
+    using: {
+      tsearch: { prefix: true }
+    }
 end

@@ -1,6 +1,10 @@
 class BeersController < ApplicationController
   def index
-    @beers = Beer.all
+    if params[:query].present?
+      @beers = Beer.search_by_name_style_and_country(params[:query])
+    else
+      @beers = Beer.all
+    end
   end
 
   def show
