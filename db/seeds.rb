@@ -5,7 +5,7 @@ List.destroy_all
 puts 'Data Base created'
 Brewery.create!(name: 'Heineken', address: 'Stadhouderskade 78, 1072 AE Amsterdam, Pays-Bas', bar: true)
 
-Beer.create!(name: 'Heineken', country: 'Netherlands', style: 'Pils', abv: 4.5, brewery: Brewery.first)
+Beer.create!(name: 'Heineken', country: 'Netherlands', style: 'Pils', abv: 4.5, brewery: Brewery.first, photo: 'heineken-original-bottle.png')
 Beer.create!(name: 'Kronenbourg', country: 'France', style: 'Pils', abv: 4.3, brewery: Brewery.first)
 Beer.create!(name: 'Estrella', country: 'Spain', style: 'Pils', abv: 5, brewery: Brewery.first)
 Beer.create!(name: 'Mahou', country: 'Spain', style: 'IPA', abv: 5.1, brewery: Brewery.first)

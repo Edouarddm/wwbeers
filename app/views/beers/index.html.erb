@@ -21,7 +21,7 @@
     <% @beers.each do |beer| %>
       <%= link_to beer_path(beer) do%>
         <div class='beer-cards'>
-            <%= image_tag "wwb.webp" %>
+            <%= beer.photo %>
             <h2><%= beer.name %></h2>
             <p><%= beer.style %> | <%= beer.abv %>%</p>
             <p><%= beer.country %></p>
