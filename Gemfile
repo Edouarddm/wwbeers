@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem "geocoder"
 gem "pg_search"
+gem "cloudinary"
 
 ruby "3.1.2"
 

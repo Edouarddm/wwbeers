@@ -1,3 +1,5 @@
+require "open-uri"
+
 Beer.destroy_all
 Brewery.destroy_all
 List.destroy_all
