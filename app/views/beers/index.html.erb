@@ -9,9 +9,9 @@
           <%= text_field_tag :query,
                 params[:query],
                 class: "form-control",
-                placeholder: "Type a keyword"
+                placeholder: "Search by beer name, style, country..."
             %>
-          <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+          <%= submit_tag "Search", name: "", class: "btn" %>
         <% end %>
       </div>
     </div>
@@ -21,9 +21,9 @@
     <% @beers.each do |beer| %>
       <%= link_to beer_path(beer) do%>
         <div class='beer-cards'>
-            <%= beer.photo %>
+            <%= cl_image_tag beer.photo.key, height: 400 %>
             <h2><%= beer.name %></h2>
-            <p><%= beer.style %> | <%= beer.abv %>%</p>
+            <p><%= beer.style %> | <%= beer.abv.to_f %>%</p>
             <p><%= beer.country %></p>
         </div>
       <% end %>

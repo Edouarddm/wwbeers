@@ -2,7 +2,8 @@
 <%# <div class="my-container"> %>
   <div class="product-wrapper">
     <div class="show-image">
-      <%= image_tag "heineken-original-bottle.png" %>
+    <h1> <%= @beer.name  %></h1>
+       <%= cl_image_tag @beer.photo.key %>
       <div style="text-align: center">
         <%= link_to "Add to a list", "#", class: "btn btn-gradient" %>
       </div>
@@ -12,10 +13,13 @@
       <h2><%= @beer.style %> | <%= @beer.abv %>% | <%= @beer.country %></h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam minima accusantium qui molestias alias ea fuga molestiae tempora soluta. Eligendi praesentium assumenda illum fugiat debitis. Eum cum sit iure omnis.
       Repellat, dignissimos, corrupti assumenda vel ad fugiat iure expedita.</p>
+      <p><strong>Brewery address: </strong> <%= @beer.brewery.address %></p>
       <div id="map"style="width: 550px; height: 300px;"
         data-controller="map"
         data-map-markers-value="<%= @markers.to_json %>"
         data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+      <div>
       </div>
     </div>
   </div>
