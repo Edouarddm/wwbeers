@@ -23,7 +23,7 @@
         <div class='beer-cards'>
             <%= cl_image_tag beer.photo.key, height: 400 %>
             <h2><%= beer.name %></h2>
-            <p><%= beer.style %> | <%= beer.abv.to_f %>%</p>
+            <p><%= beer.style %> | <%= beer.abv %>%</p>
             <p><%= beer.country %></p>
         </div>
       <% end %>

@@ -8,6 +8,7 @@ class BeersController < ApplicationController
   end
 
   def show
+    @bookmark = Bookmark.new
     @beer = Beer.find(params[:id])
     @brewery = Brewery.where(id: @beer.brewery_id)
     @markers = @brewery.geocoded.map do |brewery|

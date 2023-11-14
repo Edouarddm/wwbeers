@@ -5,7 +5,12 @@
     <h1> <%= @beer.name  %></h1>
        <%= cl_image_tag @beer.photo.key %>
       <div style="text-align: center">
-        <%= link_to "Add to a list", "#", class: "btn btn-gradient" %>
+        <% unless @beer.bookmarks.any? %>
+          <%= simple_form_for @bookmark do |f| %>
+            <%= f.input :beer_id, input_html: { value: @beer.id.to_i }, placeholder: 'Name of the list', as: :hidden %>
+            <%= f.submit class: 'btn btn-gradient' %>
+          <% end %>
+        <% end %>
       </div>
     </div>
     <div class="beer-description">

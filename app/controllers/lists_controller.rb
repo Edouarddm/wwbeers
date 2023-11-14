@@ -6,6 +6,7 @@ class ListsController < ApplicationController
   end
 
   def show
+    @beers = @list.beers
     @list = List.find(params[:id])
   end
 

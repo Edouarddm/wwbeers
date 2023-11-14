@@ -7,9 +7,9 @@ Rails.application.routes.draw do
   end
   resources :beers, only: [:index, :show]
   resources :lists, only: [:new, :create, :index, :show] do
-    resources :bookmarks, only: [:new, :create]
+    # resources :bookmarks, only: [:new, :create]
   end
-  resources :bookmarks, only: [:destroy]
+  resources :bookmarks, only: [:destroy, :create]
   resources :lits, only: [:destroy]
   # Defines the root path route ("/")
   # root "articles#index"
