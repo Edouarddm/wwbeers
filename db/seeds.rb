@@ -15,7 +15,7 @@ kronenbourg_photo = URI.open('https://res.cloudinary.com/dzvicjn3i/image/upload/
 kronenbourg = Beer.create!(name: 'Kronenbourg', country: 'France', style: 'Pils', abv: 4.3, brewery: kronenbourg_brewery)
 kronenbourg.photo.attach(io: kronenbourg_photo, filename: 'kronenbourg.png', content_type: 'image/png')
 puts 'Kronenbourg created'
-guinness_brewery = Brewery.create!(name: 'Guinness', address: 'St. James Gate, Dublin 8, D08 VF8H, Irlande', bar: true)
+guinness_brewery = Brewery.create!(name: 'Guinness', address: "Guinness Storehouse St.James's Gate D08 VF8H, Ireland", bar: true)
 guinness_photo = URI.open('https://res.cloudinary.com/dzvicjn3i/image/upload/v1699905117/jrk3cnuogsnddbctwemx.png')
 guinness = Beer.create!(name: 'Guinness', country: 'Ireland', style: 'Stout', abv: 4.2, brewery: guinness_brewery)
 guinness.photo.attach(io: guinness_photo, filename: 'guinness.png', content_type: 'image/png')
@@ -40,17 +40,17 @@ corona_photo = URI.open('https://res.cloudinary.com/dzvicjn3i/image/upload/v1699
 corona = Beer.create!(name: 'Corona', country: 'Mexico', style: 'Pils', abv: 4.5, brewery: corona_brewery)
 corona.photo.attach(io: corona_photo, filename: 'corona.png', content_type: 'image/webp')
 puts 'Corona created'
-budweiser_brewery = Brewery.create!(name: 'Budweiser', address: 'One Busch Place, St. Louis, MO 63118, États-Unis', bar: true)
+budweiser_brewery = Brewery.create!(name: 'Budweiser', address: '1200 Lynch St, St. Louis, MO 63118, États-Unis', bar: true)
 budweiser_photo = URI.open('https://res.cloudinary.com/dzvicjn3i/image/upload/v1699905380/hyqevd0fvyqptfjxqvau.png')
 budweiser = Beer.create!(name: 'Budweiser', country: 'United States', style: 'Pils', abv: 5, brewery: budweiser_brewery)
 budweiser.photo.attach(io: budweiser_photo, filename: 'budweiser.png', content_type: 'image/png')
 puts 'Budweiser created'
-asahi_brewery = Brewery.create!(name: 'Asahi', address: '1-23-1 Azumabashi, Sumida City, Tokyo 130-8602, Japon', bar: true)
+asahi_brewery = Brewery.create!(name: 'Asahi', address: '1 Chome-1-1 Midori, Moriya, Ibaraki 302-0106, Japon', bar: true)
 asahi_photo = URI.open('https://res.cloudinary.com/dzvicjn3i/image/upload/v1699903795/nduzgaxaut2rhzqbmweb.png')
 asahi = Beer.create!(name: 'Asahi', country: 'Japan', style: 'Pils', abv: 5, brewery: asahi_brewery)
 asahi.photo.attach(io: asahi_photo, filename: 'asahi.png', content_type: 'image/png')
 puts 'Asahi created'
-tiger_brewery = Brewery.create!(name: 'Tiger', address: '459 Jln Ahmad Ibrahim, Singapore 639934', bar: true)
+tiger_brewery = Brewery.create!(name: 'Tiger', address: '459 Jalan Ahmad Ibrahim, Singapore 639934', bar: true)
 tiger_photo = URI.open('https://res.cloudinary.com/dzvicjn3i/image/upload/v1699904023/usbfuazsuaawwmxas2lp.png')
 tiger = Beer.create!(name: 'Tiger', country: 'Singapore', style: 'Pils', abv: 5, brewery: tiger_brewery)
 tiger.photo.attach(io: tiger_photo, filename: 'tiger.png', content_type: 'image/png')

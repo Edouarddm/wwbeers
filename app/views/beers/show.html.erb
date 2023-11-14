@@ -2,13 +2,12 @@
 <%# <div class="my-container"> %>
   <div class="product-wrapper">
     <div class="show-image">
-    <h1> <%= @beer.name  %></h1>
        <%= cl_image_tag @beer.photo.key %>
       <div style="text-align: center">
         <% unless @beer.bookmarks.any? %>
           <%= simple_form_for @bookmark do |f| %>
             <%= f.input :beer_id, input_html: { value: @beer.id.to_i }, placeholder: 'Name of the list', as: :hidden %>
-            <%= f.submit class: 'btn btn-gradient' %>
+            <%= f.submit 'Add to list', class: 'btn btn-gradient' %>
           <% end %>
         <% end %>
       </div>
