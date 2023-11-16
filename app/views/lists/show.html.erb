@@ -1,5 +1,5 @@
 <div class="container">
-  <h1><%= @list.name %></h1>
+  <h1 class="text-center"><%= @list.name %></h1>
 <div class="cards">
     <% @beers.each do |beer| %>
       <%= link_to beer_path(beer) do%>

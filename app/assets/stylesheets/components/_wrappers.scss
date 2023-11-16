@@ -17,3 +17,25 @@
     font-size: 70px;
   }
 }
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 768px) {
+  .product-wrapper {
+    display: block;
+  }
+  .show-image {
+    width: 100%;
+    img {
+      width: 50%;
+      height: 50%;
+    }
+  }
+  .beer-description {
+    width: 100%;
+  }
+  #map {
+    width: 100%;
+  }
+
+
+}
